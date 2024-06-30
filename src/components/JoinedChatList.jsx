@@ -2,7 +2,7 @@ import React from 'react';
 import ChatSearch from './ChatSearch';
 import { useNavigate } from 'react-router-dom';
 
-export default function JoinedChats() {
+export default function JoinedChatList() {
   const navigate = useNavigate();
   return (
     <div className="list-container">

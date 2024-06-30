@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AvailableChats() {
+export default function AvailableChatList() {
   return (
     <div className="container-fluid">
       <div className="row mt-3">
