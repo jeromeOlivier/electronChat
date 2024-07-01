@@ -1,14 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import chatReducer from '../reducers/chats';
 
 export default function initStore() {
   const store = configureStore({
-    reducer: (state) => {
-      return {
-        message: 'Hello World',
-        data1: 'just some test data',
-        data2: 'just some test data 2',
-      };
-    },
+    reducer: combineReducers({
+      chats: chatReducer,
+    }),
   });
   return store;
 }
