@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Login() {
+export default function Welcome() {
   return (
     <div className="centered-view">
       <div className="centered-container">

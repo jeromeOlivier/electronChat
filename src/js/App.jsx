@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import configureStore from '../store';
 
 import { NavBar } from '../components/';
-import { Home, Settings, Register, Login, Chat } from '../views/';
+import { Home, Settings, Welcome, Chat } from '../views/';
 
 const store = configureStore();
 
@@ -16,11 +16,10 @@ export default function App() {
         <NavBar />
         <div className="content-wrapper">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Welcome />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/chat/:id" element={<Chat />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
           </Routes>
         </div>
       </Router>
