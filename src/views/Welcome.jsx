@@ -7,7 +7,7 @@ export default function Welcome() {
   const toggleForm = () => setIsLogIn(!isLoginIn);
   const form = isLoginIn ? <LoginForm /> : <RegisterForm />;
   const message = isLoginIn ? `Don't have an account?` : `Already registered?`;
-  const action = isLoginIn ? `Register` : `Login`;
+  const action = isLoginIn ? `Register` : `Sign in`;
 
   return (
     <div className="centered-view">
