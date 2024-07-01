@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { AvailableChatList, JoinedChatList, Title } from '../components/';
-import { fetchChats } from '../api/chats';
+import { fetchChats } from '../actions/chats';
+import { useDispatch } from 'react-redux';
 
 export default function Home() {
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetchChats().then((chats) => {
-      debugger;
-    });
-  });
+    dispatch(fetchChats());
+  }, [dispatch]);
   return (
     <div className="row no-gutters fh">
       <div className="col-3 fh">
